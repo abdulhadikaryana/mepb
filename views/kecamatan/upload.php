@@ -1,0 +1,37 @@
+<?php
+
+use yii\helpers\Html;
+// use yii\widgets\ActiveForm;
+use yii\bootstrap\ActiveForm;
+use kartik\widgets\FileInput;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Kabupatenkota */
+/* @var $form yii\widgets\ActiveForm */
+?>
+
+<div class="kecamatan-upload">
+
+    <?php $form = ActiveForm::begin([
+        'options' => array('enctype' => 'multipart/form-data')
+    ]); ?>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'file')->widget(FileInput::classname(), [
+                'options' => [
+                    'multiple' => true,
+                    'accept' => '.csv*'
+                ],
+                'pluginOptions' => [
+                    'showUpload' => false,
+                    'showRemove' => false,
+                ]
+            ]);?>
+        </div>
+    </div>
+    <div class="form-group">
+        <?= Html::submitButton('<i class="fa fa-cloud"></i> Unggah' , ['class' => 'btn btn-primary']) ?>
+    </div>
+    <?php ActiveForm::end(); ?>
+
+</div>

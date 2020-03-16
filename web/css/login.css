@@ -1,0 +1,22 @@
+html { 
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-page {
+    background: transparent !important;
+}
+
+.outer{
+    width: 100% !important;
+}
+.center-page {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
